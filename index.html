@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+      name="description"
+      content="Page profil de Osiris Balonga | Développeur fullstack basé à Brazzaville, Congo.">
+    <title>Osiris Balonga | Profil</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
+      rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <input class="overlay-toggle" type="checkbox" id="contact-toggle">
+
+    <div
+      id="contact-overlay"
+      class="contact-overlay"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="contact-heading"
+    >
+      <label for="contact-toggle" class="overlay-backdrop">
+        <span class="sr-only">Fermer le formulaire de contact</span>
+      </label>
+
+      <div class="contact-card">
+        <div class="sheet-handle"></div>
+
+        <div class="contact-card-header">
+          <h2 id="contact-heading" class="contact-card-title">
+            Envoyer un message
+          </h2>
+          <label for="contact-toggle" class="modal-close-button">
+            <i class="ri-close-line" aria-hidden="true"></i>
+            <span class="sr-only">Fermer</span>
+          </label>
+        </div>
+
+        <form action="#" method="post" class="contact-form">
+          <div class="form-field">
+            <label class="form-label" for="f-name">Nom complet</label>
+            <input
+              class="form-control"
+              type="text"
+              id="f-name"
+              name="name"
+              autocomplete="name"
+              required>
+          </div>
+          <div class="form-field">
+            <label class="form-label" for="f-email">Adresse email</label>
+            <input
+              class="form-control"
+              type="email"
+              id="f-email"
+              name="email"
+              autocomplete="email"
+              required>
+          </div>
+          <div class="form-field">
+            <label class="form-label" for="f-message">Message</label>
+            <textarea
+              class="form-control"
+              id="f-message"
+              name="message"
+              required
+            ></textarea>
+          </div>
+          <button type="submit" class="primary-button">
+            <i class="ri-send-plane-line" aria-hidden="true"></i>
+            Envoyer
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <input class="overlay-toggle" type="checkbox" id="photo-toggle">
+
+    <div
+      id="photo-overlay"
+      class="photo-overlay"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Photo de profil en plein écran"
+    >
+      <label for="photo-toggle" class="overlay-backdrop photo-backdrop">
+        <span class="sr-only">Fermer</span>
+      </label>
+
+      <img
+        src="assets/profile-picture.jpeg"
+        alt="Osiris Balonga"
+        class="photo-fullscreen">
+
+      <label for="photo-toggle" class="glass-pill photo-close-button">
+        <span class="glass-icon">
+          <i class="ri-close-line" aria-hidden="true"></i>
+        </span>
+        <span class="sr-only">Fermer</span>
+      </label>
+    </div>
+
+    <header class="site-header">
+      <nav class="site-navigation" aria-label="Navigation principale">
+        <div class="glass-pill">
+          <a href="#" class="glass-icon" aria-label="Retour">
+            <i class="ri-arrow-left-s-line" aria-hidden="true"></i>
+          </a>
+        </div>
+
+        <div class="glass-pill">
+          <button
+            class="glass-icon"
+            type="button"
+            aria-label="Partager ce profil"
+            title="Partager"
+          >
+            <i class="ri-share-forward-line" aria-hidden="true"></i>
+          </button>
+          <button
+            class="glass-icon"
+            type="button"
+            aria-label="Ajouter aux contacts"
+            title="Ajouter"
+          >
+            <i class="ri-user-add-line" aria-hidden="true"></i>
+          </button>
+          <button
+            class="glass-icon"
+            type="button"
+            aria-label="Plus d'options"
+            title="Plus"
+          >
+            <i class="ri-more-2-fill" aria-hidden="true"></i>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="site-main">
+      <section class="profile-section" aria-label="Informations de profil">
+        <div class="profile-media">
+          <img src="assets/cover-picture.webp" alt="" class="profile-cover">
+
+          <label
+            for="photo-toggle"
+            class="profile-avatar-link"
+            title="Agrandir"
+          >
+            <img
+              src="assets/profile-picture.jpeg"
+              alt="Photo de profil de Osiris Balonga"
+              class="profile-avatar">
+            <span class="sr-only">Voir la photo en plein écran</span>
+          </label>
+        </div>
+
+        <div class="profile-content">
+          <div class="profile-name-row">
+            <h1 class="profile-name">Osiris Balonga</h1>
+            <i
+              class="ri-verified-badge-fill profile-badge"
+              title="Profil vérifié"
+              aria-hidden="true"
+            ></i>
+            <span class="sr-only">Profil vérifié</span>
+          </div>
+
+          <p class="profile-role">Fullstack Developer</p>
+          <p class="profile-location">
+            <i class="ri-map-pin-2-line" aria-hidden="true"></i>
+            Brazzaville, Congo
+          </p>
+
+          <p class="profile-bio">
+            Je crée des applications web dynamiques et intuitives avec React et
+            TypeScript, avec une attention particulière pour les interfaces
+            responsives, les composants réutilisables et l'intégration d'API.
+          </p>
+
+          <nav class="social-links" aria-label="Réseaux sociaux">
+            <a
+              href="https://www.linkedin.com/in/osiris-balonga"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-link social-link-linkedin"
+              aria-label="LinkedIn"
+            >
+              <i class="ri-linkedin-box-fill" aria-hidden="true"></i>
+            </a>
+            <a
+              href="https://github.com/Osiris-Balonga"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-link social-link-github"
+              aria-label="GitHub"
+            >
+              <i class="ri-github-fill" aria-hidden="true"></i>
+            </a>
+            <a
+              href="https://21st.dev/community/osiris-balonga"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-link social-link-website"
+              aria-label="21st.dev"
+            >
+              <i class="ri-link" aria-hidden="true"></i>
+            </a>
+          </nav>
+
+          <label for="contact-toggle" class="primary-button contact-button">
+            <i class="ri-mail-send-line" aria-hidden="true"></i>
+            Contact
+            <span class="sr-only">Ouvrir le formulaire de contact</span>
+          </label>
+        </div>
+      </section>
+
+      <section
+        class="content-section skills-section"
+        aria-labelledby="skills-title"
+      >
+        <h2 id="skills-title" class="section-title">Skills</h2>
+        <ul class="skills-list">
+          <li>
+            <span class="skill-chip">
+              <img
+                src="https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/tailwind-css/default.svg"
+                alt=""
+                width="16"
+                height="16">
+              Tailwind CSS
+            </span>
+          </li>
+          <li>
+            <span class="skill-chip">
+              <img
+                src="https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/typescript/default.svg"
+                alt=""
+                width="16"
+                height="16">
+              TypeScript
+            </span>
+          </li>
+          <li>
+            <span class="skill-chip">
+              <img
+                src="https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/vuedotjs/default.svg"
+                alt=""
+                width="16"
+                height="16">
+              Vue.js
+            </span>
+          </li>
+          <li>
+            <span class="skill-chip">
+              <img
+                src="https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/react/default.svg"
+                alt=""
+                width="16"
+                height="16">
+              React
+            </span>
+          </li>
+          <li>
+            <span class="skill-chip">
+              <img
+                src="https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/nextdotjs/default.svg"
+                alt=""
+                width="16"
+                height="16">
+              Next.js
+            </span>
+          </li>
+          <li>
+            <span class="skill-chip">
+              <img
+                src="https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/nuxt/default.svg"
+                alt=""
+                width="16"
+                height="16">
+              Nuxt.js
+            </span>
+          </li>
+          <li>
+            <span class="skill-chip">
+              <img
+                src="https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/prisma/mono.svg"
+                alt=""
+                width="16"
+                height="16">
+              Prisma
+            </span>
+          </li>
+          <li>
+            <span class="skill-chip">
+              <img
+                src="https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/supabase/default.svg"
+                alt=""
+                width="16"
+                height="16">
+              Supabase
+            </span>
+          </li>
+          <li>
+            <span class="skill-chip">
+              <img
+                src="https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/github/default.svg"
+                alt=""
+                width="16"
+                height="16">
+              GitHub
+            </span>
+          </li>
+          <li>
+            <span class="skill-chip">
+              <img
+                src="https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/playwright/default.svg"
+                alt=""
+                width="16"
+                height="16">
+              Playwright
+            </span>
+          </li>
+          <li>
+            <span class="skill-chip">
+              <img
+                src="https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/posthog/default.svg"
+                alt=""
+                width="16"
+                height="16">
+              PostHog
+            </span>
+          </li>
+        </ul>
+      </section>
+
+      <section
+        class="content-section education-section"
+        aria-labelledby="formation-title"
+      >
+        <h2 id="formation-title" class="section-title">Formation</h2>
+        <ul class="education-list">
+          <li>
+            <article class="education-card">
+              <img
+                src="assets/esgae.png"
+                alt=""
+                width="40"
+                height="40"
+                class="education-logo">
+              <div class="education-content">
+                <h3 class="education-title">Bachelor en Informatique</h3>
+                <p class="education-school">
+                  École Supérieure de Gestion et d'Administration des
+                  Entreprises
+                </p>
+                <p class="education-period">2020 - 2023</p>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article class="education-card">
+              <img
+                src="assets/csjpe.png"
+                alt=""
+                width="40"
+                height="40"
+                class="education-logo">
+              <div class="education-content">
+                <h3 class="education-title">Baccalauréat</h3>
+                <p class="education-school">
+                  Complexe Scolaire Joseph Perfection Éducation
+                </p>
+                <p class="education-period">2017 - 2020</p>
+              </div>
+            </article>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>
+        <strong>© 2026 Osiris Balonga</strong> | Construit avec HTML5 &amp; CSS.
+      </p>
+    </footer>
+  </body>
+</html>
